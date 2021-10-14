@@ -59,3 +59,30 @@ header p{
 header p strong {
     font-weight: 600;
 }
+main .image{
+    text-align: center;
+}
+video{
+    width: 100%;
+    height: auto;
+}
+#tip{
+    text-align: center;
+    background-image: url("/assets/Q1_newsletter-02.png");
+    background-size: cover;
+    background-position: top center;
+}
+#tip h2{
+    font-size: 2.5em;
+}
+#tip p {
+    margin-bottom: 0;
+}
+footer{
+    padding: 3% 0;
+    background: #231F20;
+    color: #fff;
+}
+footer h3{
+    color: #fff;
+}
