@@ -86,3 +86,57 @@ footer{
 footer h3{
     color: #fff;
 }
+@media screen and (min-width: 678px) {
+    body{
+        font-size: 19px;
+    }
+    header h2{
+        font-size: 2.4em;
+        text-align: right;
+        margin-right: 11.5%;
+    }
+    header p {
+        text-align: right;
+    }
+    main .text, main .image{
+        display: inline-block;
+        vertical-align: top;
+    }
+    main .text{
+        width: 59%;
+    }
+    main .image img {
+        width: 200%;
+    }
+    main .ytb-1 .image img{
+        margin: -50% 0 0 -40%;
+    }
+    main .ytb-2 .image img{
+        margin: -60% 0 0 -55%;
+    }
+    main .ytb-2 .text {
+        text-align: right;
+        padding-left: 5%;
+    }
+    main .ytb-2 .bottom {
+        margin-top: -10%;
+    }
+    video {
+        margin-top: 15%;
+    }
+    footer .container div{
+        display: inline-block;
+        vertical-align: top;
+    }
+    footer .container div:first-of-type {
+        width: 59%;
+        padding-right: 6%;
+    }
+    footer .container div:last-of-type {
+        width: 39%;
+        text-align: right;
+    }
+    footer p {
+        margin-top: 0;
+    }
+}   
