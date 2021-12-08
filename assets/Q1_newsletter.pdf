@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<!-- saved from url=(0331)https://assignment.itslearning.com/Annotations/AnnotationApp.aspx?AnnotationAccessArea=1&AnnotationOfUserId=0&IsReadOnly=True&LearningObjectId=269662879&LearningObjectInstanceId=387685190&MobileBrowser=NotDefined&SourceUniqueId=6a195297-a232-43f9-ac3e-9b9d60d45e4d&UserId=150217414&ViewUniqueId=6a195297-a232-43f9-ac3e-9b9d60d45e4d -->
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="sv-SE" style="--loadingBar-end-offset:16px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="google" content="notranslate"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Q1_newsletter - Q1_newsletter.pdf</title><link href="./Q1_newsletter - Q1_newsletter_files/ccl.css" rel="stylesheet">
+<link href="./Q1_newsletter - Q1_newsletter_files/assignment.css" rel="stylesheet">
+<script src="./Q1_newsletter - Q1_newsletter_files/jquery-1.7.1.min.js.download"></script>
+<script src="./Q1_newsletter - Q1_newsletter_files/jquery-ui-1.11.4.custom.min.js.download"></script>
+<script src="./Q1_newsletter - Q1_newsletter_files/commonControlLibrary.min.js.download"></script>
+<script src="./Q1_newsletter - Q1_newsletter_files/assignment.min.js.download"></script>
+<script src="./Q1_newsletter - Q1_newsletter_files/pdf.js.download"></script><script src="./Q1_newsletter - Q1_newsletter_files/pdf.viewer.js.download"></script></head>
+
+    <body tabindex="1" class="loadingInProgress">
+        
+
+
+<!--
+Copyright 2012 Mozilla Foundation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Adobe CMap resources are covered by their own copyright but the same license:
+
+    Copyright 1990-2015 Adobe Systems Incorporated.
+
+See https://github.com/adobe-type-tools/cmap-resources
+-->
+
+<link href="./Q1_newsletter - Q1_newsletter_files/viewer.css" rel="stylesheet">
+
+<link rel="resource" type="application/l10n" href="https://assignment.itslearning.com/javascript/pdfjs/web/locale/locale.properties">
+
+<div id="outerContainer" style="">
+
+    <div id="sidebarContainer" style="display:none">
+        <div id="toolbarSidebar">
+            <div id="toolbarSidebarLeft">
+                <div class="splitToolbarButton toggled">
+                    <button id="viewThumbnail" class="toolbarButton toggled" title="Visa miniatyrer" tabindex="2" data-l10n-id="thumbs" type="button">
+                        <span data-l10n-id="thumbs_label">Miniatyrer</span>
+                    </button>
+                    <button id="viewOutline" class="toolbarButton" title="Visa dokumentdisposition (dubbelklicka för att expandera/komprimera alla objekt)" tabindex="3" data-l10n-id="document_outline" type="button" disabled="">
+                        <span data-l10n-id="document_outline_label">Dokumentöversikt</span>
+                    </button>
+                    <button id="viewAttachments" class="toolbarButton" title="Visa Bilagor" tabindex="4" data-l10n-id="attachments" type="button" disabled="">
+                        <span data-l10n-id="attachments_label">Bilagor</span>
+                    </button>
+                    <button id="viewLayers" class="toolbarButton" title="Visa lager (dubbelklicka för att återställa alla lager till standardläge)" tabindex="5" data-l10n-id="layers" type="button">
+                        <span data-l10n-id="layers_label">Lager</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="toolbarSidebarRight" style="display:none">
+                <div id="outlineOptionsContainer" class="hidden">
+                    <div class="verticalToolbarSeparator"></div>
+
+                    <button id="currentOutlineItem" class="toolbarButton" disabled="disabled" title="Hitta aktuellt dispositionsobjekt" tabindex="6" data-l10n-id="current_outline_item" type="button">
+                        <span data-l10n-id="current_outline_item_label">Aktuellt dispositionsobjekt</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="sidebarContent">
+            <div id="thumbnailView"><a href="https://assignment.itslearning.com/Annotations/AnnotationApp.aspx?AnnotationAccessArea=1&amp;AnnotationOfUserId=0&amp;IsReadOnly=True&amp;LearningObjectId=269662879&amp;LearningObjectInstanceId=387685190&amp;MobileBrowser=NotDefined&amp;SourceUniqueId=6a195297-a232-43f9-ac3e-9b9d60d45e4d&amp;UserId=150217414&amp;ViewUniqueId=6a195297-a232-43f9-ac3e-9b9d60d45e4d#page=1" title="Sida 1"><div class="thumbnail selected" data-page-number="1"><div class="thumbnailSelectionRing" style="width: 100px; height: 412px;"></div></div></a></div>
+            <div id="outlineView" class="hidden"></div>
+            <div id="attachmentsView" class="hidden"></div>
+            <div id="layersView" class="hidden"><div class="treeItem"><a><input type="checkbox" id="12R"><label for="12R">Lager 1</label></a></div></div>
+        </div>
+        <div id="sidebarResizer" class="hidden"></div>
+    </div>  
+
+    <div id="mainContainer">
+        <div class="drawbar hidden doorHanger" id="drawbar">
+            <div class="splitToolbarButton">
+                <button id="pencil-black" class="ili toolbarButton pencil-icon pencil-color black active" title="Svart penna" type="button">
+                    <span>Svart penna</span>
+                </button>
+                <button id="pencil-red" class="ili toolbarButton pencil-icon pencil-color red" title="Röd penna" type="button">
+                    <span>Röd penna</span>
+                </button>
+                <button id="pencil-green" class="ili toolbarButton pencil-icon pencil-color green" title="Grön penna" type="button">
+                    <span>Grön penna</span>
+                </button>
+                <button id="pencil-blue" class="ili toolbarButton pencil-icon pencil-color blue" title="Blå penna" type="button">
+                    <span>Blå penna</span>
+                </button>
+                <div class="splitToolbarVerticalSeparator"></div>
+                <button id="pencil-width1" class="ili toolbarButton pencil-icon pencil-width width1" title="Låg viktning" type="button">
+                    <span>Låg viktning</span>
+                </button>
+                <button id="pencil-width2" class="ili toolbarButton pencil-icon pencil-width width2 active" title="Medelhög viktning" type="button">
+                    <span>Medelhög viktning</span>
+                </button>
+                <button id="pencil-width3" class="ili toolbarButton pencil-icon pencil-width width3" title="Hög viktning" type="button">
+                    <span>Hög viktning</span>
+                </button>
+                <button id="pencil-width4" class="ili toolbarButton pencil-icon pencil-width width4" title="Extra hög viktning" type="button">
+                    <span>Extra hög viktning</span>
+                </button>
+            </div>
+        </div>  
+
+        <div class="findbar hidden doorHanger" id="findbar">
+            <div id="findbarInputContainer">
+                <input id="findInput" class="toolbarField" title="Sök" placeholder="Sök i dokument…" tabindex="91" data-l10n-id="find_input">
+                <div class="splitToolbarButton">
+                    <button id="findPrevious" class="toolbarButton findPrevious" title="Hitta föregående förekomst av frasen" tabindex="92" data-l10n-id="find_previous" type="button">
+                        <span data-l10n-id="find_previous_label">Föregående</span>
+                    </button>
+                    <div class="splitToolbarButtonSeparator"></div>
+                    <button id="findNext" class="toolbarButton findNext" title="Hitta nästa förekomst av frasen" tabindex="93" data-l10n-id="find_next" type="button">
+                        <span data-l10n-id="find_next_label">Nästa</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="findbarOptionsOneContainer">
+                <input type="checkbox" id="findHighlightAll" class="toolbarField" tabindex="94">
+                <label for="findHighlightAll" class="toolbarLabel" data-l10n-id="find_highlight">Markera alla</label>
+                <input type="checkbox" id="findMatchCase" class="toolbarField" tabindex="95">
+                <label for="findMatchCase" class="toolbarLabel" data-l10n-id="find_match_case_label">Matcha versal/gemen</label>
+            </div>
+            <div id="findbarOptionsTwoContainer">
+                <input type="checkbox" id="findEntireWord" class="toolbarField" tabindex="96">
+                <label for="findEntireWord" class="toolbarLabel" data-l10n-id="find_entire_word_label">Hela ord</label>
+                <span id="findResultsCount" class="toolbarLabel hidden"></span>
+            </div>
+
+            <div id="findbarMessageContainer">
+                <span id="findMsg" class="toolbarLabel"></span>
+            </div>
+        </div>  
+
+        <div id="secondaryToolbar" class="secondaryToolbar hidden doorHangerRight">
+            <div id="secondaryToolbarButtonContainer">
+                <button id="secondaryPresentationMode" class="secondaryToolbarButton presentationMode visibleLargeView" title="Byt till presentationsläge" tabindex="51" data-l10n-id="presentation_mode" type="button">
+                    <span data-l10n-id="presentation_mode_label">Presentationsläge</span>
+                </button>
+
+                <button id="secondaryOpenFile" class="secondaryToolbarButton openFile visibleLargeView" title="Öppna fil" tabindex="52" data-l10n-id="open_file" type="button">
+                    <span data-l10n-id="open_file_label">Öppna</span>
+                </button>
+
+                <button id="secondaryPrint" class="secondaryToolbarButton print visibleMediumView" title="Skriv ut" tabindex="53" data-l10n-id="print" type="button">
+                    <span data-l10n-id="print_label">Skriv ut</span>
+                </button>
+
+                <button id="secondaryDownload" class="secondaryToolbarButton download visibleMediumView" title="Hämta" tabindex="54" data-l10n-id="download" type="button">
+                    <span data-l10n-id="download_label">Hämta</span>
+                </button>
+
+                <a href="https://assignment.itslearning.com/Annotations/AnnotationApp.aspx?AnnotationAccessArea=1&amp;AnnotationOfUserId=0&amp;IsReadOnly=True&amp;LearningObjectId=269662879&amp;LearningObjectInstanceId=387685190&amp;MobileBrowser=NotDefined&amp;SourceUniqueId=6a195297-a232-43f9-ac3e-9b9d60d45e4d&amp;UserId=150217414&amp;ViewUniqueId=6a195297-a232-43f9-ac3e-9b9d60d45e4d#page=1&amp;zoom=30,-1400,2517" id="secondaryViewBookmark" class="secondaryToolbarButton bookmark visibleSmallView" title="Aktuell vy (kopiera eller öppna i nytt fönster)" tabindex="55" data-l10n-id="bookmark">
+                    <span data-l10n-id="bookmark_label">Aktuell vy</span>
+                </a>
+
+                <div class="horizontalToolbarSeparator visibleLargeView"></div>
+
+                <button id="firstPage" class="secondaryToolbarButton firstPage" title="Gå till första sidan" tabindex="56" data-l10n-id="first_page" disabled="" type="button">
+                    <span data-l10n-id="first_page_label">Gå till första sidan</span>
+                </button>
+                <button id="lastPage" class="secondaryToolbarButton lastPage" title="Gå till sista sidan" tabindex="57" data-l10n-id="last_page" type="button" disabled="">
+                    <span data-l10n-id="last_page_label">Gå till sista sidan</span>
+                </button>
+
+                <div class="horizontalToolbarSeparator"></div>
+
+                <button id="pageRotateCw" class="secondaryToolbarButton rotateCw" title="Rotera medurs" tabindex="58" data-l10n-id="page_rotate_cw" type="button">
+                    <span data-l10n-id="page_rotate_cw_label">Rotera medurs</span>
+                </button>
+                <button id="pageRotateCcw" class="secondaryToolbarButton rotateCcw" title="Rotera moturs" tabindex="59" data-l10n-id="page_rotate_ccw" type="button">
+                    <span data-l10n-id="page_rotate_ccw_label">Rotera moturs</span>
+                </button>
+
+                <div class="horizontalToolbarSeparator"></div>
+
+                <button id="cursorSelectTool" class="secondaryToolbarButton selectTool toggled" title="Aktivera textmarkeringsverktyg" tabindex="60" data-l10n-id="cursor_text_select_tool" type="button">
+                    <span data-l10n-id="cursor_text_select_tool_label">Textmarkeringsverktyg</span>
+                </button>
+                <button id="cursorHandTool" class="secondaryToolbarButton handTool" title="Aktivera handverktyg" tabindex="61" data-l10n-id="cursor_hand_tool" type="button">
+                    <span data-l10n-id="cursor_hand_tool_label">Handverktyg</span>
+                </button>
+
+                <div class="horizontalToolbarSeparator"></div>
+
+                <button id="scrollVertical" class="secondaryToolbarButton scrollModeButtons scrollVertical toggled" title="Använd vertikal rullning" tabindex="62" data-l10n-id="scroll_vertical" type="button">
+                    <span data-l10n-id="scroll_vertical_label">Vertikal rullning</span>
+                </button>
+                <button id="scrollHorizontal" class="secondaryToolbarButton scrollModeButtons scrollHorizontal" title="Använd horisontell rullning" tabindex="63" data-l10n-id="scroll_horizontal" type="button">
+                    <span data-l10n-id="scroll_horizontal_label">Horisontell rullning</span>
+                </button>
+                <button id="scrollWrapped" class="secondaryToolbarButton scrollModeButtons scrollWrapped" title="Använd överlappande rullning" tabindex="64" data-l10n-id="scroll_wrapped" type="button">
+                    <span data-l10n-id="scroll_wrapped_label">Överlappande rullning</span>
+                </button>
+
+                <div class="horizontalToolbarSeparator scrollModeButtons"></div>
+
+                <button id="spreadNone" class="secondaryToolbarButton spreadModeButtons spreadNone toggled" title="Visa enkelsidor" tabindex="65" data-l10n-id="spread_none" type="button">
+                    <span data-l10n-id="spread_none_label">Enkelsidor</span>
+                </button>
+                <button id="spreadOdd" class="secondaryToolbarButton spreadModeButtons spreadOdd" title="Visa uppslag med olika sidnummer till vänster" tabindex="66" data-l10n-id="spread_odd" type="button">
+                    <span data-l10n-id="spread_odd_label">Uppslag med framsida</span>
+                </button>
+                <button id="spreadEven" class="secondaryToolbarButton spreadModeButtons spreadEven" title="Visa uppslag med lika sidnummer till vänster" tabindex="67" data-l10n-id="spread_even" type="button">
+                    <span data-l10n-id="spread_even_label">Uppslag utan framsida</span>
+                </button>
+
+                <div class="horizontalToolbarSeparator spreadModeButtons"></div>
+
+                <button id="documentProperties" class="secondaryToolbarButton documentProperties" title="Dokumentegenskaper…" tabindex="68" data-l10n-id="document_properties" type="button">
+                    <span data-l10n-id="document_properties_label">Dokumentegenskaper…</span>
+                </button>
+            </div>
+        </div>  
+
+        <div class="toolbar">
+            <div id="toolbarContainer">
+                <div id="toolbarViewer">
+                    <div id="toolbarViewerLeft">
+                        <button id="sidebarToggle" style="display: none;" class="toolbarButton pdfSidebarNotification" title="Växla sidofält (dokumentet innehåller dokumentstruktur/bilagor/lager)" tabindex="11" data-l10n-id="toggle_sidebar" type="button">
+                            <span data-l10n-id="toggle_sidebar_label">Visa/dölj sidofält</span>
+                        </button>
+                        <div style="display: none;" class="toolbarButtonSpacer"></div>
+                        <button id="viewFind" style="display: none;" class="toolbarButton" title="Sök i dokument" tabindex="12" data-l10n-id="findbar" type="button">
+                            <span data-l10n-id="findbar_label">Sök</span>
+                        </button>
+                        <div style="display: none;" class="splitToolbarButton hiddenSmallView">
+                            <button class="toolbarButton pageUp" title="Föregående sida" id="previous" tabindex="13" data-l10n-id="previous" disabled="" type="button">
+                                <span data-l10n-id="previous_label">Föregående</span>
+                            </button>
+                            <div class="splitToolbarButtonSeparator"></div>
+                            <button class="toolbarButton pageDown" title="Nästa sida" id="next" tabindex="14" data-l10n-id="next" type="button" disabled="">
+                                <span data-l10n-id="next_label">Nästa</span>
+                            </button>
+                        </div>
+                        <input style="display: none;" type="number" id="pageNumber" class="toolbarField pageNumber" title="Sida" value="1" size="4" min="1" tabindex="15" data-l10n-id="page" autocomplete="off" max="1">
+                        <span style="display: none;" id="numPages" class="toolbarLabel">av 1</span>
+                        <span style="display: none;" id="document-status-saving" class="toolbarLabel">Sparar...</span>
+                        <span style="display: none;" id="document-status-saved" class="toolbarLabel">Sparat</span>
+                    </div>
+                    <div id="toolbarViewerRight">
+                        <button id="presentationMode" style="display: none;" class="toolbarButton presentationMode hiddenLargeView" title="Byt till presentationsläge" tabindex="31" data-l10n-id="presentation_mode" type="button">
+                            <span data-l10n-id="presentation_mode_label">Presentationsläge</span>
+                        </button>
+
+                        <button id="openFile" style="display: none;" class="toolbarButton openFile hiddenLargeView" title="Öppna fil" tabindex="32" data-l10n-id="open_file" type="button">
+                            <span data-l10n-id="open_file_label">Öppna</span>
+                        </button>
+
+                        <span id="scaleSelectContainer" class="dropdownToolbarButton" style="width: 141.963px;">
+                            <label for="scaleSelect" class="h-hidden">Välj en zoomnivå:</label>
+                            <select id="scaleSelect" title="Zoom" tabindex="23" data-l10n-id="zoom" style="width: 163.963px;">
+                                <option id="pageAutoOption" title="" value="auto" selected="selected" data-l10n-id="page_scale_auto">Automatisk zoom</option>
+                                <option id="pageActualOption" title="" value="page-actual" data-l10n-id="page_scale_actual">Verklig storlek</option>
+                                <option id="pageFitOption" title="" value="page-fit" data-l10n-id="page_scale_fit">Anpassa sida</option>
+                                <option id="pageWidthOption" title="" value="page-width" data-l10n-id="page_scale_width">Sidbredd</option>
+                                <option id="customScaleOption" title="" value="custom" disabled="disabled" hidden="true">30%</option>
+                                <option title="" value="0.5" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 50 }">50%</option>
+                                <option title="" value="0.75" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 75 }">75%</option>
+                                <option title="" value="1" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 100 }">100%</option>
+                                <option title="" value="1.25" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 125 }">125%</option>
+                                <option title="" value="1.5" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 150 }">150%</option>
+                                <option title="" value="2" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 200 }">200%</option>
+                                <option title="" value="3" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 300 }">300%</option>
+                                <option title="" value="4" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 400 }">400%</option>
+                            </select>
+                        </span>
+
+                        <div class="verticalToolbarSeparator hiddenSmallView"></div>
+
+                        <div class="splitToolbarButton">
+                            <button id="zoomOut" class="toolbarButton zoomOut" title="Zooma ut" tabindex="21" data-l10n-id="zoom_out" type="button">
+                                <span data-l10n-id="zoom_out_label">Zooma ut</span>
+                            </button>
+                            <button id="zoomIn" class="toolbarButton zoomIn" title="Zooma in" tabindex="22" data-l10n-id="zoom_in" type="button">
+                                <span data-l10n-id="zoom_in_label">Zooma in</span>
+                            </button>
+                        </div>
+
+                        <div class="verticalToolbarSeparator hiddenSmallView"></div>
+
+                        <button id="print" style="" class="toolbarButton print hiddenMediumView" title="Skriv ut" tabindex="33" data-l10n-id="print" type="button">
+                            <span data-l10n-id="print_label">Skriv ut</span>
+                        </button>
+
+                        <button id="download" style="display: none;" class="toolbarButton download hiddenMediumView" title="Hämta" tabindex="34" data-l10n-id="download" type="button">
+                            <span data-l10n-id="download_label">Hämta</span>
+                        </button>
+                        <a href="https://assignment.itslearning.com/Annotations/AnnotationApp.aspx?AnnotationAccessArea=1&amp;AnnotationOfUserId=0&amp;IsReadOnly=True&amp;LearningObjectId=269662879&amp;LearningObjectInstanceId=387685190&amp;MobileBrowser=NotDefined&amp;SourceUniqueId=6a195297-a232-43f9-ac3e-9b9d60d45e4d&amp;UserId=150217414&amp;ViewUniqueId=6a195297-a232-43f9-ac3e-9b9d60d45e4d#page=1&amp;zoom=30,-1400,2517" id="viewBookmark" style="display: none;" class="toolbarButton bookmark hiddenSmallView" title="Aktuell vy (kopiera eller öppna i nytt fönster)" tabindex="35" data-l10n-id="bookmark">
+                            <span data-l10n-id="bookmark_label">Aktuell vy</span>
+                        </a>
+
+                        <div style="display: none;" class="verticalToolbarSeparator hiddenSmallView"></div>
+
+                        <button id="secondaryToolbarToggle" style="display: none;" class="toolbarButton" title="Verktyg" tabindex="36" data-l10n-id="tools" type="button">
+                            <span data-l10n-id="tools_label">Verktyg</span>
+                        </button>
+                    </div>
+                    <div id="toolbarViewerMiddle" style="display: none">
+                    </div>
+                </div>
+                <div id="loadingBar" class="hidden">
+                    <div class="progress" style="height: 100%; width: 100%;">
+                        <div class="glimmer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <menu type="context" id="viewerContextMenu">
+            <menuitem id="contextFirstPage" label="First Page" data-l10n-id="first_page" title="Gå till första sidan"></menuitem>
+            <menuitem id="contextLastPage" label="Last Page" data-l10n-id="last_page" title="Gå till sista sidan"></menuitem>
+            <menuitem id="contextPageRotateCw" label="Rotate Clockwise" data-l10n-id="page_rotate_cw" title="Rotera medurs"></menuitem>
+            <menuitem id="contextPageRotateCcw" label="Rotate Counter-Clockwise" data-l10n-id="page_rotate_ccw" title="Rotera moturs"></menuitem>
+        </menu>
+
+        <div id="viewerContainer" tabindex="0" style="z-index: 10000;">
+            <div id="viewer" class="pdfViewer"><div class="page" data-page-number="1" role="region" style="width: 238px; height: 996px;" aria-label="Sida 1" data-loaded="true"><div class="canvasWrapper" style="width: 238px; height: 996px;"><canvas width="360" height="1497" style="width: 240px; height: 998px;"></canvas><canvas id="drawingLayer1" height="998" width="240" style="position: relative; top: -998px; touch-action: none; cursor: url(&quot;/Content/Svg/Annotations/Cursor/pencil-black.svg&quot;) 0 31, auto;"></canvas></div><div class="textLayer" style="width: 238px; height: 996px;"><span dir="ltr" style="left: 106.646px; top: 11.9464px; font-size: 6.4px; font-family: sans-serif; transform: scaleX(1.13572);">Voodoo</span><span dir="ltr" style="left: 124.107px; top: 159.69px; font-size: 10.8px; font-family: sans-serif; transform: scaleX(1.16659);">Hey guys,</span><span dir="ltr" style="left: 38.9797px; top: 183.102px; font-size: 5.2px; font-family: sans-serif; transform: scaleX(1.12147);">This week we’ll be discussing the concept of </span><span dir="ltr" style="left: 155.023px; top: 183.102px; font-size: 5.2px; font-family: sans-serif; transform: scaleX(1.2028);">"Youtubability" </span><span dir="ltr" style="left: 196.441px; top: 183.102px; font-size: 5.2px; font-family: sans-serif; transform: scaleX(1.05429);">- </span><span dir="ltr" style="left: 105.93px; top: 189.342px; font-size: 5.2px; font-family: sans-serif; transform: scaleX(1.17209);">another important game guideline.</span><span dir="ltr" style="left: 40.1291px; top: 232.298px; font-size: 5.6px; font-family: sans-serif; transform: scaleX(1.26581);">Youtubability</span><span dir="ltr" style="left: 39.685px; top: 245.814px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.10617);">A key driver of youtubability is </span><span dir="ltr" style="left: 105.42px; top: 245.814px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.17045);">the clarity </span><span dir="ltr" style="left: 39.685px; top: 252.612px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.14849);">of your gameplay </span><span dir="ltr" style="left: 79.8526px; top: 252.612px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.11755);">to a potential player.</span><span dir="ltr" style="left: 39.685px; top: 266.212px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.10867);">Gameplay clarity will help you achieve the </span><span dir="ltr" style="left: 39.685px; top: 273.01px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.13453);">full potential of your game by working on </span><span dir="ltr" style="left: 39.685px; top: 279.808px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.1996);">getting </span><span dir="ltr" style="left: 56.999px; top: 279.808px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.12005);">the lowest possible CPIs </span><span dir="ltr" style="left: 112.056px; top: 279.808px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.10225);">for your </span><span dir="ltr" style="left: 39.685px; top: 286.606px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.09932);">games.</span><span dir="ltr" style="left: 39.685px; top: 300.207px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.11234);">Many elements can be used to make your </span><span dir="ltr" style="left: 39.685px; top: 307.005px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.0927);">game clearer :</span><span dir="ltr" style="left: 39.685px; top: 320.605px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.07922);">For instance, ask yourself if a user’s inte-</span><span dir="ltr" style="left: 39.685px; top: 327.403px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.14034);">raction with the game is </span><span dir="ltr" style="left: 93.7869px; top: 327.403px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.18743);">evident</span><span dir="ltr" style="left: 110.635px; top: 327.403px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.02325);">, for </span><span dir="ltr" style="left: 39.685px; top: 334.201px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.10355);">example, can she tell which character she </span><span dir="ltr" style="left: 39.685px; top: 340.999px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.14895);">controls?</span><span dir="ltr" style="left: 60.1978px; top: 340.999px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.07045);"> Is the </span><span dir="ltr" style="left: 74.3345px; top: 340.999px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.14243);">objective clear?</span><span dir="ltr" style="left: 109.261px; top: 340.999px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.07716);"> Does it </span><span dir="ltr" style="left: 39.685px; top: 347.797px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.11064);">look </span><span dir="ltr" style="left: 50.0074px; top: 347.797px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.15929);">fun to play?</span><span dir="ltr" style="left: 76.381px; top: 347.797px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.1057);"> Has she understood the </span><span dir="ltr" style="left: 39.685px; top: 354.595px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.0734);">game after 1 second (great!) or after 10 </span><span dir="ltr" style="left: 39.685px; top: 361.393px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.08543);">seconds (too long!).</span><span dir="ltr" style="left: 39.685px; top: 374.994px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.08897);">Make sure to </span><span dir="ltr" style="left: 68.7122px; top: 374.994px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.11748);">use colours </span><span dir="ltr" style="left: 95.2222px; top: 374.994px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.13664);">to help indicate </span><span dir="ltr" style="left: 39.685px; top: 381.792px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.09847);">the gameplay rules. For instance, in Helix </span><span dir="ltr" style="left: 39.685px; top: 388.59px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.08925);">Jump, obstacles are </span><span dir="ltr" style="left: 83.905px; top: 388.59px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.1525);">clearly contrasted</span><span dir="ltr" style="left: 123.646px; top: 388.59px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.0612);"> (in </span><span dir="ltr" style="left: 39.685px; top: 395.388px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.10997);">orange here) and instantly recognized as </span><span dir="ltr" style="left: 39.685px; top: 402.186px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.10765);">a threat.</span><span dir="ltr" style="left: 127.494px; top: 570.965px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.12043);">If you want to run user tests with </span><span dir="ltr" style="left: 123.208px; top: 577.763px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.10703);">f riends and family or even random </span><span dir="ltr" style="left: 116.314px; top: 584.561px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.12327);">people in the street, it is interesting to </span><span dir="ltr" style="left: 113.779px; top: 591.359px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.11683);">show them the 30 second video before </span><span dir="ltr" style="left: 115.205px; top: 598.157px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.15357);">making them try to prototype in order </span><span dir="ltr" style="left: 113.911px; top: 604.955px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.12969);">to </span><span dir="ltr" style="left: 119.438px; top: 604.955px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.18298);">understand their </span><span dir="ltr" style="left: 158.501px; top: 604.955px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.10449);">expectations f rom </span><span dir="ltr" style="left: 116.195px; top: 611.753px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.11456);">the video vs. the actual game they try.</span><span dir="ltr" style="left: 117.669px; top: 625.354px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.14323);">Make it obvious</span><span dir="ltr" style="left: 152.618px; top: 625.354px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.12249);"> with visual elements </span><span dir="ltr" style="left: 111.152px; top: 632.152px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.16011);">that help </span><span dir="ltr" style="left: 132.154px; top: 632.152px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.16846);">understand the objective and </span><span dir="ltr" style="left: 123.833px; top: 638.95px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.15762);">controls </span><span dir="ltr" style="left: 143.083px; top: 638.95px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.13189);">of the game, like with the </span><span dir="ltr" style="left: 122.122px; top: 645.748px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.08674);">target used in Viatcheslav Tarasov’s </span><span dir="ltr" style="left: 118.316px; top: 652.546px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.09295);">Purple Diver or Fabrika Games’ Draw </span><span dir="ltr" style="left: 129.32px; top: 659.344px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.11737);">Car with the space dedicated to </span><span dir="ltr" style="left: 179.454px; top: 666.142px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.14081);">drawing.</span><span dir="ltr" style="left: 40.3192px; top: 739.067px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.11919);">People will be watching the gameplay videos of your games </span><span dir="ltr" style="left: 171.985px; top: 739.067px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.17708);">on their </span><span dir="ltr" style="left: 40.3192px; top: 745.865px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.13264);">phone’s Facebook feed</span><span dir="ltr" style="left: 92.0412px; top: 745.865px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.12386);">, everything will seem smaller than when </span><span dir="ltr" style="left: 40.3192px; top: 752.663px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.10215);">displayed in Unity or as a video on your computer screen. </span><span dir="ltr" style="left: 165.121px; top: 752.663px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.13585);">You should </span><span dir="ltr" style="left: 40.3192px; top: 759.461px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.15023);">also consider whether your gameplay video is understandable if </span><span dir="ltr" style="left: 40.3192px; top: 766.259px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.1549);">someone watches it</span><span dir="ltr" style="left: 86.3603px; top: 766.259px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.11365);">on a small screen.</span><span dir="ltr" style="left: 126.123px; top: 766.259px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.11224);"> With an average watch time of 3 </span><span dir="ltr" style="left: 40.3192px; top: 773.057px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.06907);">to 5 seconds, this is an </span><span dir="ltr" style="left: 89.476px; top: 773.057px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.14808);">accelerated elevator pitch!</span><span dir="ltr" style="left: 40.3192px; top: 786.657px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.12966);">Think of the moment when you decide to click on a random video on </span><span dir="ltr" style="left: 40.3192px; top: 793.455px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.11196);">YouTube just because it has an attractive thumbnail - it’s the same idea </span><span dir="ltr" style="left: 40.3192px; top: 800.253px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.10091);">for your game videos.</span><span dir="ltr" style="left: 74.3385px; top: 842.812px; font-size: 10.8px; font-family: sans-serif; transform: scaleX(1.22788);">Tip of the week</span><span dir="ltr" style="left: 40.7406px; top: 865.542px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.10082);">Livestreams we hold every two weeks are an interesting resource for you </span><span dir="ltr" style="left: 44.353px; top: 872.34px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.10696);">to consult. There are plenty of relevant subjects covered to guide and </span><span dir="ltr" style="left: 45.7698px; top: 879.138px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.11174);">orient you towards best practices and they are </span><span dir="ltr" style="left: 147.19px; top: 879.138px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.14103);">all replayable on the </span><span dir="ltr" style="left: 67.3606px; top: 885.936px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.1536);">dashboard</span><span dir="ltr" style="left: 91.3494px; top: 885.936px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.12709);"> so don’t hesitate to check them out!</span><span dir="ltr" style="left: 39.685px; top: 938.675px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.12374);">The next publishing livestream will </span><span dir="ltr" style="left: 39.685px; top: 945.473px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.11165);">be held this Thursday (7th Novem-</span><span dir="ltr" style="left: 39.685px; top: 952.271px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.0765);">ber) at 3pm CET (Paris time).</span><span dir="ltr" style="left: 39.685px; top: 965.871px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.1087);">You’ll receive a reminder e-mail </span><span dir="ltr" style="left: 39.685px; top: 972.669px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.15762);">tomorrow.</span><span dir="ltr" style="left: 140.577px; top: 938.67px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.13435);">We look forward to seeing </span><span dir="ltr" style="left: 153.777px; top: 945.468px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.14806);">your next prototype!</span><span dir="ltr" style="left: 152.145px; top: 959.069px; font-size: 4.4px; font-family: sans-serif; transform: scaleX(1.15376);">The Publishing team</span><span dir="ltr" style="left: 39.4578px; top: 926.883px; font-size: 5.6px; font-family: sans-serif; transform: scaleX(1.20639);">Livestream</span><div class="endOfContent"></div></div></div></div>
+
+            
+            <div id="bubbleBox" class="annotation-bubble annotation-bubble-image annotation-bubble-arrow">
+            </div>
+
+            <div id="addAnnotationBox" class="annotation-adding-tooltip annotation-tooltip-arrow">
+                <div class="annotation-tooltip-person-avatar">
+                    <img src="./Q1_newsletter - Q1_newsletter_files/1x1.png" alt="">
+                </div>
+                <div class="annotation-tooltip-textarea-container">
+                    <textarea class="annotation-tooltip-textarea" maxlength="1024" rows="3"></textarea>
+                </div>
+                <div class="annotation-tooltip-button-container">
+                    <a class="annotation-tooltip-post-button ccl-button ccl-button-color-green ccl-button-ok">
+                        Lägg till
+                    </a>
+                    <a class="annotation-tooltip-cancel-button ccl-button ccl-button-color-grey ccl-button-ok">
+                        Avbryt
+                    </a>
+                </div>
+            </div>
+
+            <div id="tooltipBox" class="annotation-tooltip annotation-tooltip-arrow" style="display: none;">
+                <div class="annotation-tooltip-person-avatar">
+                    <img src="./Q1_newsletter - Q1_newsletter_files/1x1.png" alt="">
+                </div>
+                <div class="annotation-tooltip-person-name"></div>
+                <div class="annotation-tooltip-text"></div>
+                <div class="annotation-tooltip-textarea-container" style="display: none">
+                    <textarea class="annotation-tooltip-textarea" maxlength="1024" rows="3"></textarea>
+                </div>
+                <div class="annotation-tooltip-button-container">
+                    <a class="annotation-tooltip-edit-button ccl-button ccl-button-color-green ccl-button-ok" style="display: none;">
+                        Redigera
+                    </a>
+                    <a class="annotation-tooltip-save-button ccl-button ccl-button-color-green ccl-button-ok" style="display: none">
+                        Spara
+                    </a>
+                    <a class="annotation-tooltip-delete-button ccl-button ccl-button-color-grey ccl-button-ok" style="display: none;">
+                        Ta bort
+                    </a>
+                    <a class="annotation-tooltip-cancel-button ccl-button ccl-button-color-grey ccl-button-ok" style="display: none">
+                        Avbryt
+                    </a>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div id="errorWrapper" hidden="true">
+            <div id="errorMessageLeft">
+                <span id="errorMessage"></span>
+                <button id="errorShowMore" data-l10n-id="error_more_info" type="button">Mer information</button>
+                <button id="errorShowLess" data-l10n-id="error_less_info" hidden="true" type="button">Mindre information</button>
+            </div>
+            <div id="errorMessageRight">
+                <button id="errorClose" data-l10n-id="error_close" type="button">Stäng</button>
+            </div>
+            <div class="clearBoth"></div>
+            <textarea id="errorMoreInfo" hidden="true" readonly="readonly"></textarea>
+        </div>
+    </div> 
+
+    <div id="overlayContainer" class="hidden">
+        <div id="passwordOverlay" class="container hidden">
+            <div class="dialog">
+                <div class="row">
+                    <p id="passwordText" data-l10n-id="password_label">Skriv in lösenordet för att öppna PDF-filen.</p>
+                </div>
+                <div class="row">
+                    <input type="password" id="password" class="toolbarField">
+                </div>
+                <div class="buttonRow">
+                    <button id="passwordCancel" class="overlayButton" type="button"><span data-l10n-id="password_cancel">Avbryt</span></button>
+                    <button id="passwordSubmit" class="overlayButton" type="button"><span data-l10n-id="password_ok">OK</span></button>
+                </div>
+            </div>
+        </div>
+        <div id="documentPropertiesOverlay" class="container hidden">
+            <div class="dialog">
+                <div class="row">
+                    <span data-l10n-id="document_properties_file_name">Filnamn:</span> <p id="fileNameField">-</p>
+                </div>
+                <div class="row">
+                    <span data-l10n-id="document_properties_file_size">Filstorlek:</span> <p id="fileSizeField">-</p>
+                </div>
+                <div class="separator"></div>
+                <div class="row">
+                    <span data-l10n-id="document_properties_title">Titel:</span> <p id="titleField">-</p>
+                </div>
+                <div class="row">
+                    <span data-l10n-id="document_properties_author">Författare:</span> <p id="authorField">-</p>
+                </div>
+                <div class="row">
+                    <span data-l10n-id="document_properties_subject">Ämne:</span> <p id="subjectField">-</p>
+                </div>
+                <div class="row">
+                    <span data-l10n-id="document_properties_keywords">Nyckelord:</span> <p id="keywordsField">-</p>
+                </div>
+                <div class="row">
+                    <span data-l10n-id="document_properties_creation_date">Skapades:</span> <p id="creationDateField">-</p>
+                </div>
+                <div class="row">
+                    <span data-l10n-id="document_properties_modification_date">Ändrades:</span> <p id="modificationDateField">-</p>
+                </div>
+                <div class="row">
+                    <span data-l10n-id="document_properties_creator">Skapare:</span> <p id="creatorField">-</p>
+                </div>
+                <div class="separator"></div>
+                <div class="row">
+                    <span data-l10n-id="document_properties_producer">PDF-producent:</span> <p id="producerField">-</p>
+                </div>
+                <div class="row">
+                    <span data-l10n-id="document_properties_version">PDF-version:</span> <p id="versionField">-</p>
+                </div>
+                <div class="row">
+                    <span data-l10n-id="document_properties_page_count">Sidantal:</span> <p id="pageCountField">-</p>
+                </div>
+                <div class="row">
+                    <span data-l10n-id="document_properties_page_size">Pappersstorlek:</span> <p id="pageSizeField">-</p>
+                </div>
+                <div class="separator"></div>
+                <div class="row">
+                    <span data-l10n-id="document_properties_linearized">Snabb webbvisning:</span> <p id="linearizedField">-</p>
+                </div>
+                <div class="buttonRow">
+                    <button id="documentPropertiesClose" class="overlayButton" type="button"><span data-l10n-id="document_properties_close">Stäng</span></button>
+                </div>
+            </div>
+        </div>
+        <div id="printServiceOverlay" class="container hidden">
+            <div class="dialog">
+                <div class="row">
+                    <span data-l10n-id="print_progress_message">Förbereder sidor för utskrift…</span>
+                </div>
+                <div class="row">
+                    <progress value="0" max="100"></progress>
+                    <span data-l10n-id="print_progress_percent" data-l10n-args="{ &quot;progress&quot;: 0 }" class="relative-progress">0%</span>
+                </div>
+                <div class="buttonRow">
+                    <button id="printCancel" class="overlayButton" type="button"><span data-l10n-id="print_progress_close">Avbryt</span></button>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+</div> 
+<div id="printContainer"></div>
+
+<script type="text/javascript">
+    
+    function isModernPdfViewerSupported() {
+        if (window["modernPdfViewer"] !== undefined) {
+            return window["modernPdfViewer"];
+        }
+        window["modernPdfViewer"] = Annotations.AnnotationApp.isModernPdfViewerSupported();
+        return window["modernPdfViewer"];
+    }
+
+    function onPdfJsLoad() {
+        var options = {"CssClasses":{"AnnotationHighlight":"annotation","AnnotationContainer":"annotationContainer","Selection":"selection","SelectionContainer":"selectionContainer","TooltipAble":"annotation-tooltip-able","CloseButton":"annotation-close-button","AnnotationTooltipPersonAvatar":"annotation-tooltip-person-avatar","AnnotationTooltipPersonName":"annotation-tooltip-person-name","AnnotationTooltipText":"annotation-tooltip-text","AnnotationTooltipTextareaContainer":"annotation-tooltip-textarea-container","AnnotationTooltipTextarea":"annotation-tooltip-textarea","AnnotationTooltipButtonContainer":"annotation-tooltip-button-container","AnnotationTooltipPostButton":"annotation-tooltip-post-button","AnnotationTooltipCancelButton":"annotation-tooltip-cancel-button","AnnotationTooltipEditButton":"annotation-tooltip-edit-button","AnnotationTooltipDeleteButton":"annotation-tooltip-delete-button","AnnotationTooltipSaveButton":"annotation-tooltip-save-button","BubbleArrowTop":"annotation-bubble-arrow-top","BubbleArrowBottom":"annotation-bubble-arrow-bottom","TooltipArrowTop":"annotation-tooltip-arrow-top","TooltipArrowBottom":"annotation-tooltip-arrow-bottom","AnnotationButton":"annotation-button"},"Urls":{"Endpoint":"../api/lo/269662879/387685190/annotations//?FileId=6a195297-a232-43f9-ac3e-9b9d60d45e4d","DefaultPersonAvatar":"/Content/Images/generic_user_icon_32.png","UserProfileImage":"https://filerepository.itslearning.com/21feb86b-5876-431f-b38e-0e5854e23e65","FileInfoUrl":"https://filerepository.itslearning.com/6a195297-a232-43f9-ac3e-9b9d60d45e4d?Token=hVwGABa_DQCmmrBhAAAAACAAEkIpIocbpcGSm16uXBCay7kHRHCXpiU8wDYXV2vMjngAAA\u0026Info=1","FileRepoUploadTokenUrl":"../api/uploadtoken/","FileRepoUrl":"https://filerepository.itslearning.com"},"Terms":{"ErrorOccured":"Ett fel uppstod","ErrorCannotSaveFile":"Du kan inte spara ändringarna. Kopiera din svarstext och tryck på Avbryt.","Ok":"OK"},"FileRepoId":"6a195297-a232-43f9-ac3e-9b9d60d45e4d","FileName":"Q1_newsletter.pdf","LearningObjectId":269662879,"UserFullName":"Buske, Zarha","IsReadOnly":true,"Onboarding":null,"PdfJsWorker":"/javascript/pdfjs/build/pdf.worker.js?v=3.124.0.588\u0026sv=1","PdfJsES5Worker":"/javascript/pdfjs/build/pdf.worker.es5.js?v=3.124.0.588\u0026sv=1","PdfJsViewer":"/javascript/pdfjs/web/pdf.viewer.js?v=3.124.0.588\u0026sv=1","PdfJsES5Viewer":"/javascript/pdfjs/web/pdf.viewer.es5.js?v=3.124.0.588\u0026sv=1","PdfJs":"/javascript/pdfjs/build/pdf.js?v=3.124.0.588\u0026sv=1","PdfJsES5":"/javascript/pdfjs/build/pdf.es5.js?v=3.124.0.588\u0026sv=1","PdfJsCmapsFolder":"/javascript/pdfjs/web/cmaps/","OnboardingCssClasses":{"Overlay":"h-background-color-gray-light"},"IsOpenInCssModal":false,"AnnotationOfUserId":0,"ErrorMessage":null,"Language":"sv-SE","IsDrawingAnnotationsEnabled":true,"IsFillableFormsEnabled":false,"IsPrintButtonVisible":true,"CursorsFolder":"/Content/Svg/Annotations/Cursor","IsAssignmentAnswerFile":false};
+        var annotationApp = new Annotations.AnnotationApp(options, isModernPdfViewerSupported());
+        
+        setTimeout(() => {
+            document.getElementById("outerContainer").style.display = "";
+        }, 50);
+        annotationApp.init();
+    }
+
+    if (isModernPdfViewerSupported()) {
+        var pdfJsUrl = '/javascript/pdfjs/build/pdf.js?v=3.124.0.588&amp;sv=1';
+        var pdfViewerUrl = '/javascript/pdfjs/web/pdf.viewer.js?v=3.124.0.588&amp;sv=1';
+    } else {
+        var pdfJsUrl = '/javascript/pdfjs/build/pdf.es5.js?v=3.124.0.588&amp;sv=1';
+        var pdfViewerUrl = '/javascript/pdfjs/web/pdf.viewer.es5.js?v=3.124.0.588&amp;sv=1';
+    }
+
+    Tools.ScriptLoader.loadScript(pdfJsUrl).addEventListener('load', function () {
+        Tools.ScriptLoader.loadScript(pdfViewerUrl).addEventListener('load', onPdfJsLoad);
+    });
+</script>
+
+<form name="ctl01" method="post" action="https://assignment.itslearning.com/Annotations/AnnotationApp.aspx?AnnotationAccessArea=1&amp;AnnotationOfUserId=0&amp;IsReadOnly=True&amp;LearningObjectId=269662879&amp;LearningObjectInstanceId=387685190&amp;MobileBrowser=NotDefined&amp;SourceUniqueId=6a195297-a232-43f9-ac3e-9b9d60d45e4d&amp;UserId=150217414&amp;ViewUniqueId=6a195297-a232-43f9-ac3e-9b9d60d45e4d" id="ctl01">
+<div>
+<input type="hidden" name="__ITSL_CSRF_TOKEN__" id="__ITSL_CSRF_TOKEN__" value="oLVG4ibs1wEExiL0CGN4Y3ZmbXU0aTVwNXA1cmkwMnRjaTJ4aeknGbpMC1xwNZUxGYV6L0i1NC6G63Rr3zD3yKwWJOMYaOLT5d2lKADoXIFG+0WXDdih+Ld/WLKef8mSJgPorRo=">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="O7OdvwN/7mdD+13Tn8vi22zxCz5LWh4G/x4ry7b4rk+aPt/wVtreag18gONRQ7kATGYK/7t9+jstrGWALAhltZnKVGUXuA28lYzZSOsWZj8g9RmdLQ2Zc/cceaJ1rO6+00Dsv6LEcjDmyCrNwVn9f43FO+4AKd0C6yne0FkwxDiJ3btv">
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0ED3F331">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+$(function() { IframeClickEventHelper.registerDocumentClickBubblingOnTop(); });
+document.addEventListener('DOMContentLoaded',
+    function() {
+        CommonFunctions.handleNavigationToAnchorsInUserInputInsideIframesResizedByTheirParents('.h-userinput');
+    }
+);attachOnReadySendTitleToParent();
+$(function() { var k = new CCL.KeepAlive({"webMethodUrl":"/Annotations/api/keepalive/v1","intervalInSeconds":1800,"errorTimeoutInSeconds":60,"maxNumberOfTries":1000,"postData":"{\"assignmentId\":269662879}","headerName":null,"headerValue":null}); });
+//]]>
+</script>
+</form>
+    
+
+<iframe id="nr-ext-rsicon" style="position: absolute; display: none; width: 50px; height: 50px; z-index: 2147483647; border-style: none; background: transparent;" src="./Q1_newsletter - Q1_newsletter_files/saved_resource.html"></iframe></body></html>
