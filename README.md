@@ -1,6 +1,11 @@
 # Voodoo
-### First assignment in the course Frontend Development at Medieinstitutet. 
+First assignment in the course Frontend Development at Medieinstitutet. 
 
+## Live Demo
+[Live Demo](https://zs-voodoo.netlify.app/)
+
+
+## Description
 You should be able to make a responsive website according to the attached layout (see below)
 
 The goal of the assignment is for you to show good knowledge in HTML & CSS and show that you understand the basics of how to build a responsive website. 
